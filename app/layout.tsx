@@ -10,9 +10,17 @@ const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200"
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Ninh Studio | Premium Photography in East Vancouver',
+  description: 'Premium photography studio in East Vancouver specializing in fashion, portraits, and maternity sessions. Book your session today.',
   generator: 'v0.app',
+  openGraph: {
+    title: 'Ninh Studio | Premium Photography in East Vancouver',
+    description: 'Premium photography studio in East Vancouver specializing in fashion, portraits, and maternity sessions.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
   icons: {
     icon: [
       {
@@ -38,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="en" className="scroll-smooth bg-canvas-white">
+      <body className="font-sans antialiased bg-canvas-white">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
