@@ -27,7 +27,8 @@ export function HeroSection() {
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-canvas-blush/40 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-canvas-blush/60 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent z-10" />
 
       <div className="relative z-20 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -39,13 +40,13 @@ export function HeroSection() {
               className="flex flex-col justify-center space-y-6"
             >
               <motion.div variants={textRevealVariants}>
-                <p className="text-sm font-serif tracking-widest text-accent-rose uppercase">
+                <p className="text-sm font-serif tracking-widest text-accent-rose uppercase drop-shadow-[0_1px_4px_rgba(255,255,255,0.8)]">
                   East Vancouver · Photography Studio
                 </p>
               </motion.div>
 
               <motion.div variants={clipPathRevealVariants}>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold leading-tight text-gray-900">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold leading-tight text-gray-900 drop-shadow-[0_2px_12px_rgba(255,255,255,0.9)]">
                   Timeless
                   <br />
                   Moments
@@ -54,7 +55,7 @@ export function HeroSection() {
                 </h1>
               </motion.div>
 
-              <motion.p variants={textRevealVariants} className="text-lg text-gray-600 max-w-md">
+              <motion.p variants={textRevealVariants} className="text-lg text-gray-700 max-w-md drop-shadow-[0_1px_8px_rgba(255,255,255,0.7)]">
                 Professional photography sessions that celebrate your unique story. From fashion to family, we capture the essence of every moment.
               </motion.p>
 

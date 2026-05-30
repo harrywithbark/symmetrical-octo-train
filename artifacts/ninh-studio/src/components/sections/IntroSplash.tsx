@@ -12,7 +12,7 @@ export function IntroSplash({ onComplete }: IntroSplashProps) {
     const timer = setTimeout(() => {
       setShowSplash(false)
       setTimeout(onComplete, 800)
-    }, 2500)
+    }, 1200)
 
     return () => clearTimeout(timer)
   }, [onComplete])

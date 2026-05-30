@@ -2,6 +2,13 @@ import { motion } from 'framer-motion'
 import { SERVICES } from '@/lib/constants'
 import { staggerContainerVariants, fadeInVariants } from '@/lib/animations'
 
+function scrollToContact() {
+  const element = document.getElementById('contact')
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+
 export function ServicesGrid() {
   return (
     <section id="services" className="py-20 bg-canvas-white">
@@ -52,7 +59,10 @@ export function ServicesGrid() {
                   {service.price}
                 </p>
                 <p className="text-gray-600 mb-6">{service.description}</p>
-                <button className="inline-flex items-center gap-2 text-accent-rose font-serif hover:gap-3 transition-all">
+                <button
+                  onClick={scrollToContact}
+                  className="inline-flex items-center gap-2 text-accent-rose font-serif hover:gap-3 transition-all"
+                >
                   Inquire About This Session →
                 </button>
               </div>
