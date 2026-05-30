@@ -44,7 +44,7 @@ export function Navigation() {
           >
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-2xl font-serif font-bold text-accent-rose italic"
+              className="text-3xl font-[family-name:var(--font-script)] text-accent-rose"
             >
               Ninh
             </button>

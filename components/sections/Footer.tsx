@@ -19,11 +19,14 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-serif font-bold italic mb-2">
-              {STUDIO_NAME}
+            <h3 className="text-4xl font-[family-name:var(--font-script)] mb-2">
+              Ninh
             </h3>
-            <p className="text-white/80 text-sm">
-              Premium photography studio in East Vancouver
+            <p className="text-white/80 text-sm uppercase tracking-widest">
+              Studio
+            </p>
+            <p className="text-white/60 text-sm mt-2">
+              Premium photography in East Vancouver
             </p>
           </motion.div>
 

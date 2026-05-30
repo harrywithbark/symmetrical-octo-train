@@ -25,8 +25,8 @@ export function HeroSection() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/images/hero-portrait.png"
-          alt="Ninh Studio - Premium Photography"
+          src="/images/studio-hero.png"
+          alt="Ninh Studio - Premium Photography Studio"
           fill
           className="object-cover"
           priority
