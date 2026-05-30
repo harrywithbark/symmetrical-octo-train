@@ -28,8 +28,9 @@ export function Footer() {
             <h4 className="font-serif font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#hero" className="text-white/80 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#services" className="text-white/80 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="text-white/80 hover:text-white transition-colors">Portfolio</a></li>
+              <li><a href="#services" className="text-white/80 hover:text-white transition-colors">Sessions</a></li>
+              <li><a href="#portfolio" className="text-white/80 hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="#studio" className="text-white/80 hover:text-white transition-colors">Studio</a></li>
               <li><a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </motion.div>

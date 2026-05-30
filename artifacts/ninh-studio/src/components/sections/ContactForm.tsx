@@ -7,8 +7,7 @@ import { CONTACT_INFO } from '@/lib/constants'
 import { staggerContainerVariants, fadeInVariants } from '@/lib/animations'
 
 const contactFormSchema = z.object({
-  firstName: z.string().min(1, 'First name is required'),
-  lastName: z.string().min(1, 'Last name is required'),
+  name: z.string().min(1, 'Name is required'),
   email: z.string().email('Invalid email address'),
   sessionType: z.string().min(1, 'Please select a session type'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
@@ -132,42 +131,22 @@ export function ContactForm() {
           <motion.div variants={fadeInVariants}>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-serif font-bold text-gray-900 mb-2">
-                  First Name
+                <label htmlFor="name" className="block text-sm font-serif font-bold text-gray-900 mb-2">
+                  Your Name
                 </label>
                 <input
-                  id="firstName"
+                  id="name"
                   type="text"
-                  {...register('firstName')}
+                  {...register('name')}
                   className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
-                    errors.firstName
+                    errors.name
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-gray-300 focus:ring-accent-rose focus:border-transparent'
                   }`}
-                  placeholder="Your first name"
+                  placeholder="Your full name"
                 />
-                {errors.firstName && (
-                  <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
-                )}
-              </div>
-
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-serif font-bold text-gray-900 mb-2">
-                  Last Name
-                </label>
-                <input
-                  id="lastName"
-                  type="text"
-                  {...register('lastName')}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
-                    errors.lastName
-                      ? 'border-red-500 focus:ring-red-500'
-                      : 'border-gray-300 focus:ring-accent-rose focus:border-transparent'
-                  }`}
-                  placeholder="Your last name"
-                />
-                {errors.lastName && (
-                  <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
                 )}
               </div>
 
@@ -258,7 +237,7 @@ export function ContactForm() {
                     Sending...
                   </>
                 ) : (
-                  'Send Enquiry to Studio →'
+                  'Send Enquiry →'
                 )}
               </button>
             </form>

@@ -50,13 +50,6 @@ export function HeroSection() {
             </h1>
           </motion.div>
 
-          {/* Subtitle */}
-          <motion.div variants={fadeInVariants}>
-            <p className="text-white/70 text-sm uppercase tracking-[0.15em] mb-4">
-              Events &amp; Parties
-            </p>
-          </motion.div>
-
           {/* Description */}
           <motion.p variants={fadeInVariants} className="text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
             Capturing timeless, high-quality images with a modern, artistic touch
