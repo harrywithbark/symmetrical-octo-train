@@ -57,10 +57,10 @@ export function Navigation() {
               Portfolio
             </button>
             <button
-              onClick={() => scrollToSection('story')}
+              onClick={() => scrollToSection('faq')}
               className="text-gray-700 hover:text-accent-rose transition-colors"
             >
-              Story
+              FAQ
             </button>
             <button
               onClick={() => scrollToSection('contact')}
@@ -108,10 +108,10 @@ export function Navigation() {
               Portfolio
             </button>
             <button
-              onClick={() => scrollToSection('story')}
+              onClick={() => scrollToSection('faq')}
               className="block w-full text-left py-2 text-gray-700 hover:text-accent-rose"
             >
-              Story
+              FAQ
             </button>
             <button
               onClick={() => scrollToSection('contact')}

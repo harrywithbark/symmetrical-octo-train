@@ -3,10 +3,12 @@ import { IntroSplash } from '@/components/sections/IntroSplash'
 import { Navigation } from '@/components/sections/Navigation'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { TrustBar } from '@/components/sections/TrustBar'
+import { HowItWorks } from '@/components/sections/HowItWorks'
 import { ServicesGrid } from '@/components/sections/ServicesGrid'
 import { PortfolioGrid } from '@/components/sections/PortfolioGrid'
 import { Marquee } from '@/components/sections/Marquee'
 import { ReviewsSection } from '@/components/sections/ReviewsSection'
+import { FAQ } from '@/components/sections/FAQ'
 import { StudioStory } from '@/components/sections/StudioStory'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { GoogleMap } from '@/components/sections/GoogleMap'
@@ -23,10 +25,12 @@ function App() {
           <Navigation />
           <HeroSection />
           <TrustBar />
+          <HowItWorks />
           <ServicesGrid />
           <PortfolioGrid />
           <Marquee />
           <ReviewsSection />
+          <FAQ />
           <StudioStory />
           <ContactForm />
           <GoogleMap />

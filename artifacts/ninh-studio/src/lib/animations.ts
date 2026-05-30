@@ -1,6 +1,6 @@
 import { Variants } from 'framer-motion'
 
-export const easeOutExpo = [0.16, 1, 0.3, 1]
+export const easeOutExpo: [number, number, number, number] = [0.16, 1, 0.3, 1]
 
 export const textRevealVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
