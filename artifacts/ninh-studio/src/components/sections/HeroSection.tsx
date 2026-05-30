@@ -22,10 +22,8 @@ export function HeroSection() {
           className="w-full h-full object-cover"
         />
       </div>
-
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
-
       {/* Content */}
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
         <motion.div
@@ -43,7 +41,7 @@ export function HeroSection() {
 
           {/* Headline */}
           <motion.div variants={fadeInVariants}>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-6">
+            <h1 className="sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white mb-6 text-[71px] font-normal text-center">
               Your Story
               <br />
               Deserves to Be
@@ -83,7 +81,6 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Bottom trust bar */}
       <div className="absolute bottom-0 left-0 right-0 z-20 bg-black/60 backdrop-blur-sm border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -121,5 +118,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
