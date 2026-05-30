@@ -9,7 +9,7 @@ import { PortfolioGrid } from '@/components/sections/PortfolioGrid'
 import { Marquee } from '@/components/sections/Marquee'
 import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { FAQ } from '@/components/sections/FAQ'
-import { StudioStory } from '@/components/sections/StudioStory'
+import { StudioOverview } from '@/components/sections/StudioOverview'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { GoogleMap } from '@/components/sections/GoogleMap'
 import { Footer } from '@/components/sections/Footer'
@@ -31,7 +31,7 @@ function App() {
           <Marquee />
           <ReviewsSection />
           <FAQ />
-          <StudioStory />
+          <StudioOverview />
           <ContactForm />
           <GoogleMap />
           <Footer />

@@ -30,7 +30,7 @@ export function IntroSplash({ onComplete }: IntroSplashProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-[family-name:var(--font-script)] text-7xl sm:text-8xl md:text-9xl text-white tracking-wide"
+            className="font-[family-name:var(--font-script)] text-7xl sm:text-8xl md:text-9xl text-accent-rose tracking-wide"
           >
             Ninh
           </motion.h1>
@@ -39,7 +39,7 @@ export function IntroSplash({ onComplete }: IntroSplashProps) {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-4 text-white/60 text-sm uppercase tracking-[0.3em] font-light"
+            className="mt-4 text-accent-rose/60 text-sm uppercase tracking-[0.3em] font-light"
           >
             Photography Studio
           </motion.p>
@@ -48,14 +48,14 @@ export function IntroSplash({ onComplete }: IntroSplashProps) {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1.2, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 w-24 h-px bg-white/30 origin-left"
+            className="mt-8 w-24 h-px bg-accent-rose/30 origin-left"
           />
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.6 }}
-            className="mt-6 text-white/40 text-xs uppercase tracking-[0.2em]"
+            className="mt-6 text-accent-rose/40 text-xs uppercase tracking-[0.2em]"
           >
             East Vancouver
           </motion.p>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { textRevealVariants, staggerContainerVariants, kenBurnsVariants, fadeInVariants } from '@/lib/animations'
+import { staggerContainerVariants, fadeInVariants } from '@/lib/animations'
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -12,107 +12,114 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-canvas-blush via-canvas-white to-canvas-ivory"
+      className="relative h-screen w-full overflow-hidden"
     >
-      <motion.div
-        variants={kenBurnsVariants}
-        initial="initial"
-        animate="animate"
-        className="absolute inset-0 z-0"
-      >
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
         <img
           src="/images/studio-hero.png"
           alt="Ninh Studio - Premium Photography Studio"
           className="w-full h-full object-cover"
         />
-      </motion.div>
+      </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-canvas-blush/50 via-canvas-blush/20 to-transparent z-10" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
 
-      <div className="relative z-20 h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
-            <motion.div
-              variants={staggerContainerVariants}
-              initial="hidden"
-              animate="visible"
-              className="flex flex-col justify-center space-y-6 bg-white/70 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-xl border border-white/50 w-full"
+      {/* Content */}
+      <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+        <motion.div
+          variants={staggerContainerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-4xl mx-auto"
+        >
+          {/* Eyebrow */}
+          <motion.div variants={fadeInVariants}>
+            <p className="text-accent-rose text-sm uppercase tracking-[0.2em] font-medium mb-6">
+              — East Vancouver's Creative Photography Studio
+            </p>
+          </motion.div>
+
+          {/* Headline */}
+          <motion.div variants={fadeInVariants}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-6">
+              Your Story
+              <br />
+              Deserves to Be
+              <br />
+              <span className="underline decoration-accent-rose decoration-4 underline-offset-4">Seen.</span>
+            </h1>
+          </motion.div>
+
+          {/* Subtitle */}
+          <motion.div variants={fadeInVariants}>
+            <p className="text-white/70 text-sm uppercase tracking-[0.15em] mb-4">
+              Events &amp; Parties
+            </p>
+          </motion.div>
+
+          {/* Description */}
+          <motion.p variants={fadeInVariants} className="text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            Capturing timeless, high-quality images with a modern, artistic touch
+            <br className="hidden sm:block" />
+            — right here on Joyce Street in East Van.
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div variants={fadeInVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-4 bg-accent-rose text-white font-serif font-semibold rounded-lg hover:bg-accent-rose/90 transition-all transform hover:scale-105 active:scale-95"
             >
-              <motion.div variants={textRevealVariants}>
-                <p className="text-sm font-serif tracking-widest text-accent-rose uppercase">
-                  East Vancouver · Photography Studio
-                </p>
-              </motion.div>
-
-              <motion.div variants={fadeInVariants}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold leading-snug text-gray-900">
-                  Timeless
-                  <br />
-                  Moments
-                  <br />
-                  Captured
-                </h1>
-              </motion.div>
-
-              <motion.p variants={textRevealVariants} className="text-lg text-gray-700 max-w-lg">
-                Professional photography sessions that celebrate your unique story. From fashion to family, we capture the essence of every moment.
-              </motion.p>
-
-              <motion.div variants={textRevealVariants} className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="px-8 py-4 bg-accent-rose text-white font-serif rounded-full hover:bg-accent-rose/90 transition-all transform hover:scale-105 active:scale-95"
-                >
-                  Book a Session →
-                </button>
-                <button
-                  onClick={() => scrollToSection('portfolio')}
-                  className="px-8 py-4 border-2 border-gray-900 text-gray-900 font-serif rounded-full hover:bg-gray-50 transition-all"
-                >
-                  View Our Work
-                </button>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:block relative h-full"
+              Book a Session
+            </button>
+            <button
+              onClick={() => scrollToSection('studio')}
+              className="px-8 py-4 border-2 border-white/50 text-white font-serif font-semibold rounded-lg hover:bg-white/10 transition-all"
             >
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute top-20 right-10 z-30 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-accent-rose text-lg">★</span>
-                    ))}
-                  </div>
-                  <div>
-                    <p className="text-sm font-serif text-gray-900">Loved it!</p>
-                    <p className="text-xs text-gray-600">5.0 Rating</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
+              Rent the Studio
+            </button>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Bottom trust bar */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 bg-black/60 backdrop-blur-sm border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-sm text-white/70">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-accent-rose text-sm">★</span>
+                ))}
+              </div>
+              <span className="font-medium">Google Rated</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-white/20" />
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-accent-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.367 2.184a1.125 1.125 0 001.006 0l4.625-2.281" />
+              </svg>
+              <span>Joyce-Collingwood SkyTrain</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-white/20" />
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-accent-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5h10.5a1.125 1.125 0 001.125-1.125V14.25m-7.5-10.5V3.375c0-.621-.504-1.125-1.125-1.125H2.625c-.621 0-1.125.504-1.125 1.125v3.375" />
+              </svg>
+              <span>Free Parking</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-white/20" />
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-accent-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+              </svg>
+              <span>Natural Light Studio</span>
+            </div>
           </div>
         </div>
       </div>
-
-      <motion.div
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-      >
-        <div className="text-accent-rose">
-          <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </motion.div>
     </section>
   )
 }
